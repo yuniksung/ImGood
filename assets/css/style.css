@@ -96,10 +96,8 @@ body {
   }
 
   .myself-left h3{
-
     font-size: 55px;
     color: #024e76;
-
   }
 
   .myself-right{
@@ -111,7 +109,75 @@ body {
 
   .myself-right p {
       font-size: 22px;
-      border-left: 3px solid rgb(37, 37, 37);
+      border-left: 6px solid rgb(37, 37, 37);
       padding-left: 20px;
     }
 /* About Me section style end */
+
+/* Portfolio style start */
+.portfolio {
+  padding: 0 10% 5% 11%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.portfolio-text{
+  width: 15%;
+  text-align: right;
+  flex: 1%;
+  padding-right: 20px;
+}
+
+.portfolio-text h3{
+  font-size: 55px;
+  color: #024e76;
+}
+
+.portfolio-grid{
+  display: flex;
+  align-content: center;
+  justify-content: right;
+  flex: 2 70%; 
+}
+
+.myself-right p {
+    font-size: 22px;
+    border-left: 3px solid rgb(37, 37, 37);
+    padding-left: 20px;
+  }
+
+
+  /* contact me style start */
+  .contact {
+    padding: 5% 10% 5% 10%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  
+  .contact-text{
+    width: 15%;
+    text-align: right;
+    flex: 1%;
+    padding-right: 20px;
+  }
+  
+  .contact-text h3{
+    font-size: 55px;
+    color: #024e76;
+  }
+  
+  .contact-list{
+    display: flex;
+    align-content: center;
+    justify-content: right;
+    flex: 2 70%; 
+  }
+  
+  .contact-list p {
+      font-size: 22px;
+      border-left: 6px solid rgb(37, 37, 37);
+      padding-left: 20px;
+    }
+  
