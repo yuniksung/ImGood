@@ -45,10 +45,12 @@ header a {
 
 /*Naviagation bar style*/
 header nav ul li a {
-  padding: 20px 25px;
   font-weight: lighter;
   font-size: 1.7vw;
   color: rgb(157, 203, 255);
+  border-bottom: 3px solid  rgb(131, 167, 207);
+  margin-right: 10px;
+
 }
 
 header nav ul {
@@ -57,7 +59,6 @@ header nav ul {
   justify-content: space-between;
   list-style: none;
   padding: 5px 5px 4px 5px;
-  border-bottom: 3px solid  rgb(131, 167, 207);
 }
 
 /* hero style */
@@ -82,10 +83,6 @@ header nav ul {
 }
 
 /* Article style */
-.main{
-
-}
-
 .myself {
   padding: 5% 10% 5% 10%;
   display: flex;
@@ -123,7 +120,6 @@ header nav ul {
 padding: 0 10% 5% 11%;
 display: flex;
 flex-wrap: wrap;
-align-items: flex-start;
 }
 
 .portfolio-text h3{
@@ -134,36 +130,86 @@ color: #024e76;
 /* Grid style */
 .wrapper{
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
+  
 }
 
 .container {
   border-left: 3px solid #024e76;
-  margin-left: 22px;
+  margin-left: 1.9%;
   display: grid;
-  grid-template-columns: reapeat(3, 1fr);
-  grid-gap: 1rem;
+  grid-template-columns: repeat(3, minmax(auto, 400px));
+  grid-template-rows: repeat(3, minmax(auto, 200px));
+  grid-gap: 1em;
   padding-left: 20px;
+}
+
+.container a{
+  text-decoration: none;
+}
+
+.box{
+  max-width: 100%; 
+  height: 100%;
+  background-color: powderblue;
+  border: 6px solid powderblue;
+  position: relative;
 
 }
 
-.img {
-  width: 50%;
-  object-fit: cover;
+.box h4{
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.5em;
+  background-color: powderblue;
+  align-items: flex-end;
+}
+
+.box p{
+  background-color: powderblue;
 }
 
 .surf{
   grid-row: 1/3;
   grid-column: 1/3;
+  background-image: url(../images/surfMern.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
-.img h4{
-  font-size: 22px;
-  padding-bottom: 10px;
+.led-wall{
+  grid-column: 3/4;
+  grid-row: 1/2;
+  background-image: url(../images/led-wall.png);
+  background-position: center;
+  position: relative;
+  background-size: cover;
+
 }
 
-.img p{
-  font-weight: bold;
+.calculator{
+  grid-column: 3/4;
+  grid-row: 2/3;
+  background-image: url(../images/calculator.jpeg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.pastel-puzzels{
+  grid-column: 1/2;
+  background-image: url(../images/pastel.jpg);
+  background-position: center;
+  position: relative;
+}
+
+.run-buddy{
+  grid-column: 2/3;
+  background-image: url(../images/run-buddy.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
 
 /* contact me style start */
@@ -180,6 +226,7 @@ color: #024e76;
   flex: 1%;
   padding-right: 20px;
 }
+
 
 .contact-text h3{
   font-size: 55px;
