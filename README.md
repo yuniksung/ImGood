@@ -7,7 +7,7 @@
 ![](/assets/images/otherdevice1.jpg)
 
 
-[ Click here to link to Yunik's portfolio ](https://yuniksung.github.io/ImGood/)
+[ Click here to link to Yunik's portfolio ](https://yuniksung.github.io/Yunique/)
 
 ## Purpose
 To make employers see the talented and ready-go-go web developer. 
