@@ -1,10 +1,10 @@
 # Yunik's portfolio
 
 ## Screenshot of the webpage in computer
-![](/assets/images/computer.jpg)
+![](/assets/images/computer1.jpg)
 
 ## Screenshot of the webpage in smaller device
-![](/assets/images/otherdevice.jpg)
+![](/assets/images/otherdevice1.jpg)
 
 
 [ Click here to link to Yunik's portfolio ](https://yuniksung.github.io/ImGood/)
