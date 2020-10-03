@@ -7,7 +7,7 @@
 ![](/assets/images/otherdevice.jpg)
 
 
-[ Click here to link to Yunik's portfolio ](https://yuniksung.github.io/hireMe_ImGood/./)
+[ Click here to link to Yunik's portfolio ](https://yuniksung.github.io/ImGood/)
 
 ## Purpose
 To make employers see the talented and ready-go-go web developer. 
