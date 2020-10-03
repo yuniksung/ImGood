@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+:root{
+  --text--color: rgb(37, 37, 37) ;
+  --header-color:rgb(157, 203, 255);
+  --heads-color: rgb(2, 78, 118);
+  --grid-background: rgb(176, 224, 230);
+}
+
 body {
   color: rgb(37, 37, 37);
   font-family: Helvetica, Arial, sans-serif;
@@ -83,36 +90,51 @@ header nav ul {
   color: rgb(200, 245, 0);
   text-shadow: 3px 3px rgba(0, 0, 0, 0.7);
 }
-/* Article style */
+
+.subtitle span:hover{
+  color: rgb(125, 153, 0);
+}
+
+/* About-me style */
 .myself {
   padding: 5% 10% 5% 10%;
   display: flex;
-  flex-wrap: wrap;
 }
 
-.myself-left{
+.myself-h3{ 
+  width: 15%;
   text-align: right;
-  flex: 1%;
   padding-right: 20px;
 }
 
-.myself-left h3{
+
+.myself-h3 h3{
   font-size: 55px;
-  color: #024e76;
+  color: rgb(2, 78, 118);
 }
 
 .myself-right{
   display: flex;
   align-content: center;
   justify-content: right;
-  flex: 2 70%; 
+  border-left: 3px solid #024e76;
+
+}
+
+.myself-right img{
+  width: 150px;
+  height: 200px;
+  margin-left: 20px;
+  border: 6px solid powderblue;
 }
 
 .myself-right p {
-    font-size: 22px;
-    border-left: 3px solid #024e76;
-    padding-left: 20px;
+  font-size: 22px;
+  padding-left: 20px;
+  align-items: center;
+  display: flex;
   }
+
 /* About Me section style end */
 
 /* Portfolio style start */
@@ -122,7 +144,7 @@ display: flex;
 flex-wrap: wrap;
 }
 
-.portfolio-text h3{
+.portfolio-h3 h3{
 font-size: 55px;
 color: #024e76;
 }
@@ -148,9 +170,7 @@ color: #024e76;
   text-decoration: none;
 }
 
-
-
-.zoom h4{
+.portfolio-img h4{
   font-weight: bold;
   font-size: 32px;
   line-height: 1.5em;
@@ -160,10 +180,12 @@ color: #024e76;
   z-index:1;
 }
 
-.zoom span{
+.portfolio-img span{
   padding-left: 20px;
   font-weight: lighter;
   font-size: 18px;
+  color: rgb(0, 78, 88);
+  font-style: italic;
 }
 
 /*zoom in animation*/
@@ -188,6 +210,10 @@ figure:hover img {
   transform: scale(1.3);
 }
 
+figure:hover{
+  border: 6px solid rgb(230, 176, 214);
+}
+
 .surf{
   grid-row: 1/3;
   grid-column: 1/3;
@@ -196,8 +222,6 @@ figure:hover img {
 .led-wall{
   grid-column: 3/4;
   grid-row: 1/2;
-
-
 }
 
 .calculator{
@@ -225,22 +249,23 @@ figure:hover img {
   margin-bottom: 50px;
 }
 
-.contact-text{
+.contact-h3{
   width: 15%;
   text-align: right;
   padding-right: 20px;
   
 }
 
-.contact-text h3{
+.contact-h3 h3{
   font-size: 55px;
   color: #024e76;
 }
 
 .contact-list{
-  display: flex;
   align-items: center;
   border-left: 3px solid #024e76;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .contact-list p {
@@ -265,12 +290,428 @@ figure:hover img {
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
-  
+  /*header & navigaion*/
+  header {
+    padding-bottom: 0;
+    justify-content: center;
+  }
+
+  header h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  header nav ul {
+    margin-top: 20px;
+    width: 100%;
+    padding: 0;
+    padding-bottom: 15px;
+  }
+
+  header nav ul li a {
+    font-size: 20px;
+  }
+
+  /*Hero*/
+  .hero {
+    width: 100%;
+    text-align: center;
+    height: 300px;
+  }
+
+  .subtitle{
+    font-size: 32px;
+
+  }
+
+  /*About Me section*/
+.myself{
+  flex-wrap: wrap;
+}
+
+  .myself-h3{
+    text-align: center;
+    width: 100%;
+    border-bottom: 3px solid #024e76;
+    margin-bottom: 10px;
+  }
+
+  .myself-h3 h3{
+    font-size: 40px;
+  }
+
+  .myself-right{
+    width:100%;
+    border-left: 0px solid #024e76;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .myself-right img{
+    justify-content: flex-start;
+  }
+
+  .myself-right p{
+    font-size:18px;
+  }
+
+  /*Work section*/
+  .container {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    border-left: 0px solid #024e76;
+  }
+
+  .container p{
+    justify-content: center;
+    margin: auto;
+    padding: 0;
+  }
+  .portfolio-h3{
+    text-align: center;
+    width: 100%;
+    border-bottom: 3px solid #024e76;
+    margin-bottom: 10px;
+  }
+
+  .portfolio-h3 h3{
+    font-size: 40px;
+  }
+
+  .portfolio-img { /*image changes*/
+    justify-content: center;
+    width: 100%;
+    height: 350px;
+    background-position: center;
+    margin: 5px 10px 0 0;
+  }
+
+  /*Contact me section*/
+  .contact{
+    width: 80%;
+  }
+
+  .contact-h3{
+    text-align: center;
+    width: 100%;
+    border-bottom: 3px solid #024e76;
+  }
+
+  .contact-h3 h3{
+    font-size: 40px;
+  }
+
+  .contact-list{
+    border-left: 0px solid #024e76;
+    margin-top: 10px;
+    justify-content: flex-start;
+    width: 80%;
+    flex-direction: column;
+
+  }
+
+  .contact-list p{
+    border-bottom: 0px solid  #024e76;
+    text-align: center;
+    font-size: 22px;
+  }
+}
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
- 
+  header {
+    padding-bottom: 0;
+    justify-content: center;
+  }
+  
+  header h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+  }
+  
+  header nav ul {
+    margin-top: 10px;
+    width: 100%;
+    padding: 0;
+    padding-bottom: 15px;
+  }
+  
+  header nav ul li a {
+    font-size: 20px;
+    
+  }
+  
+  /*Hero*/
+  .hero {
+    width: 100%;
+    text-align: center;
+    height: 200px;
+  }
+  
+  .subtitle{
+    font-size: 32px;
+  }
+  
+    /*About Me section*/
+.myself{
+  flex-wrap: wrap;
+}
+
+  .myself-h3{
+    text-align: center;
+    width: 100%;
+    border-bottom: 3px solid #024e76;
+    margin-bottom: 10px;
+  }
+
+  .myself-h3 h3{
+    font-size: 40px;
+  }
+
+  .myself-right{
+    width:100%;
+    border-left: 0px solid #024e76;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .myself-right img{
+    justify-content: flex-start;
+  }
+
+  .myself-right p{
+    font-size:18px;
+  }
+  /*Work section*/
+  .container {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    border-left: 0px solid #024e76;
+  }
+  
+  .container p{
+    justify-content: center;
+    margin: auto;
+    padding: 0;
+  }
+  .portfolio-h3{
+    text-align: center;
+    width: 100%;
+    border-bottom: 3px solid #024e76;
+    margin-bottom: 10px;
+  }
+  
+  .portfolio-h3 h3{
+    font-size: 30px; /*"work" text */
+  }
+  
+  .portfolio-img { /*image changes*/
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+    background-position: center;
+    margin: 5px 10px 0 0;
+  }
+  
+  .portfolio-img h4{ /*project name*/
+    font-size: 22px; 
+  }
+  
+  .portfolio-img span{ /*project software */
+    font-size: 18px; 
+  }
+  
+  .pastel-puzzels h4{
+    width: 50%;
+  }
+  
+  /*Contact me section*/
+  .contact{
+    margin: 0;
+    width: 100%;
+  }
+  
+  .contact-h3{
+    text-align: center;
+    width: 100%;
+    border-bottom: 3px solid #024e76;
+    padding-bottom:  10px;
+  }
+  
+  .contact-h3 h3{ /*"contact me" text*/
+    font-size: 30px;
+  }
+  
+  .contact-list{
+    border-left: 0px solid #024e76;
+    margin-top: 10px;
+    justify-content: flex-start;
+    width: 80%;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+  }
+  
+  .contact-list p{
+    border-bottom: 0px solid  #024e76;
+    text-align: center;
+    font-size: 22px;
+  }
+  }
+  
+
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
+/*header & navigaion*/
+header {
+  padding-bottom: 0;
+  justify-content: center;
+}
 
+header h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+}
+
+header nav ul {
+  margin-top: 10px;
+  width: 100%;
+  padding: 0;
+  padding-bottom: 15px;
+}
+
+header nav ul li a {
+  font-size: 20px;
+  
+}
+
+/*Hero*/
+.hero {
+  width: 100%;
+  text-align: center;
+  height: 200px;
+}
+
+.subtitle{
+  font-size: 32px;
+}
+
+/*About Me section*/
+.myself{
+flex-wrap: wrap;
+}
+
+.myself-h3{
+  text-align: center;
+  width: 100%;
+  border-bottom: 3px solid #024e76;
+  margin-bottom: 10px;
+}
+
+.myself-h3 h3{ /*"about me" text*/
+  font-size: 30px;
+  align-items: center;
+}
+
+.myself-right{
+  width:100%;
+  border-left: 0px solid #024e76;
+  display: block;
+  text-align: center;
+}
+
+.myself-right img{
+  margin-bottom: 10px;
+  margin-right: 40px;
+
+}
+
+.myself-right p{ /*about me biograph */
+  font-size:18px;
+}
+
+/*Work section*/
+.container {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  border-left: 0px solid #024e76;
+}
+
+.container p{
+  justify-content: center;
+  margin: auto;
+  padding: 0;
+}
+.portfolio-h3{
+  text-align: center;
+  width: 100%;
+  border-bottom: 3px solid #024e76;
+  margin-bottom: 10px;
+}
+
+.portfolio-h3 h3{
+  font-size: 30px; /*"work" text */
+}
+
+.portfolio-img { /*image changes*/
+  justify-content: center;
+  width: 100%;
+  height: 150px;
+  background-position: center;
+  margin: 5px 10px 0 0;
+}
+
+.portfolio-img h4{ /*project name*/
+  font-size: 22px; 
+}
+
+.portfolio-img span{ /*project software */
+  font-size: 18px; 
+}
+
+.pastel-puzzels h4{
+  width: 50%;
+}
+
+/*Contact me section*/
+.contact{
+  margin: 0;
+  width: 100%;
+}
+
+.contact-h3{
+  text-align: center;
+  width: 100%;
+  border-bottom: 3px solid #024e76;
+  padding-bottom:  10px;
+}
+
+.contact-h3 h3{ /*"contact me" text*/
+  font-size: 30px;
+}
+
+.contact-list{
+  border-left: 0px solid #024e76;
+  margin-top: 10px;
+  justify-content: flex-start;
+  width: 80%;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+}
+
+.contact-list p{
+  border-bottom: 0px solid  #024e76;
+  text-align: center;
+  font-size: 22px;
+}
 }
