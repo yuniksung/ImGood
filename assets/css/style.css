@@ -15,7 +15,7 @@ body {
   color: rgb(37, 37, 37);
   font-family: Helvetica, Arial, sans-serif;
   background-image: url(../images/background2.jpg);  
-   background-size: cover;  
+  background-size: cover;  
 }
 
 /* header style*/
@@ -99,10 +99,10 @@ header nav ul {
 .myself {
   padding: 5% 10% 5% 10%;
   display: flex;
+  position: relative;
 }
 
 .myself-h3{ 
-  width: 15%;
   text-align: right;
   padding-right: 20px;
 }
@@ -118,6 +118,7 @@ header nav ul {
   align-content: center;
   justify-content: right;
   border-left: 3px solid #024e76;
+  margin-right: 11%;
 
 }
 
@@ -141,7 +142,6 @@ header nav ul {
 .portfolio {
 padding: 0 10% 5% 11%;
 display: flex;
-flex-wrap: wrap;
 }
 
 .portfolio-h3 h3{
@@ -175,7 +175,7 @@ color: #024e76;
   font-size: 32px;
   line-height: 1.5em;
   background-color: rgba(176, 224, 230, 0.9);
-  position: absolute;
+  position: relative;
   padding-right: 20px;
   z-index:1;
 }
@@ -243,39 +243,47 @@ figure:hover{
 
 /* contact me style start */
 .contact {
-  margin-left: 100px;
+  margin-left: 145px;
   display: flex;
-  flex-wrap: wrap;
   margin-bottom: 50px;
+  margin-right: 2%;
 }
 
 .contact-h3{
-  width: 15%;
   text-align: right;
   padding-right: 20px;
-  
+  position: relative;
 }
 
 .contact-h3 h3{
   font-size: 55px;
   color: #024e76;
+  padding-bottom: 50px;
 }
 
+.contact-h3 span{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-right: 20px;
+}
 .contact-list{
   align-items: center;
   border-left: 3px solid #024e76;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .contact-list p {
-    color: #024e76;
-    font-size: 32px;
-    font-weight: bolder;
-    margin-left: 100px;
-    border-bottom: 6px solid  #024e76;
-    padding-bottom: 10px;
-  }
+  color: #024e76;
+  font-size: 32px;
+  font-weight: bolder;
+  margin-left: 20px;
+  margin-right: 60px;
+  border-bottom: 6px solid #024e76;
+  padding-bottom: 10px;
+}
 
 .list a{
   text-decoration: none;
@@ -325,9 +333,10 @@ figure:hover{
   }
 
   /*About Me section*/
-.myself{
-  flex-wrap: wrap;
-}
+  .myself{
+  display: block;
+  padding: 20px;
+  }
 
   .myself-h3{
     text-align: center;
@@ -337,7 +346,7 @@ figure:hover{
   }
 
   .myself-h3 h3{
-    font-size: 40px;
+    font-size: 30px;
   }
 
   .myself-right{
@@ -356,6 +365,11 @@ figure:hover{
   }
 
   /*Work section*/
+  .portfolio{
+    padding: 20px;
+    flex-wrap: wrap;
+
+  }
   .container {
     padding: 0;
     display: flex;
@@ -378,7 +392,7 @@ figure:hover{
   }
 
   .portfolio-h3 h3{
-    font-size: 40px;
+    font-size: 30px;
   }
 
   .portfolio-img { /*image changes*/
@@ -391,25 +405,31 @@ figure:hover{
 
   /*Contact me section*/
   .contact{
-    width: 80%;
+    padding: 20px;
+    margin: 0 0 50px 0;
+    display: block;
   }
 
   .contact-h3{
-    text-align: center;
-    width: 100%;
     border-bottom: 3px solid #024e76;
+    text-align: center;
   }
 
   .contact-h3 h3{
-    font-size: 40px;
+    font-size: 30px;
+    padding-bottom: 5px;
+  }
+
+  .contact-h3 span{
+    position: relative;
+
   }
 
   .contact-list{
     border-left: 0px solid #024e76;
     margin-top: 10px;
-    justify-content: flex-start;
-    width: 80%;
-    flex-direction: column;
+    margin-left: 20px;
+
 
   }
 
@@ -417,6 +437,9 @@ figure:hover{
     border-bottom: 0px solid  #024e76;
     text-align: center;
     font-size: 22px;
+    margin: 0 0 10px 70px;
+    border-bottom: 1px dotted #024e76;
+
   }
 }
 
@@ -457,9 +480,9 @@ figure:hover{
   }
   
     /*About Me section*/
-.myself{
-  flex-wrap: wrap;
-}
+  .myself{
+    flex-wrap: wrap;
+  }
 
   .myself-h3{
     text-align: center;
@@ -468,9 +491,16 @@ figure:hover{
     margin-bottom: 10px;
   }
 
-  .myself-h3 h3{
-    font-size: 40px;
+  .contact-h3 h3{
+    font-size: 30px;
+    padding-bottom: 5px;
   }
+
+  .contact-h3 span{
+    position: relative;
+
+  }
+
 
   .myself-right{
     width:100%;
@@ -557,11 +587,14 @@ figure:hover{
     flex-direction: column;
     flex-wrap: wrap-reverse;
   }
+
   
   .contact-list p{
     border-bottom: 0px solid  #024e76;
     text-align: center;
     font-size: 22px;
+    position: relative;
+    padding-bottom: 10px;
   }
   }
   
@@ -635,6 +668,7 @@ flex-wrap: wrap;
 
 .myself-right p{ /*about me biograph */
   font-size:18px;
+  padding-left:0;
 }
 
 /*Work section*/
@@ -715,3 +749,156 @@ flex-wrap: wrap;
   font-size: 22px;
 }
 }
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 400px) {
+  /*header & navigaion*/
+  header {
+    padding-bottom: 0;
+    justify-content: center;
+  }
+  
+  header h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+  }
+  
+  header nav ul {
+    padding: 0;
+    padding-bottom: 15px;
+    margin-left: 5px;
+  }
+  
+  header nav ul li a {
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  /*Hero*/
+  .hero {
+    width: 100%;
+    text-align: center;
+    height: 100px;
+  }
+  
+  .subtitle{
+    font-size: 22px;
+  }
+  
+  /*About Me section*/
+  .myself{
+  flex-wrap: wrap;
+  }
+  
+  .myself-h3{
+    text-align: center;
+    width: 100%;
+    border-bottom: 2px solid #024e76;
+    margin-bottom: 10px;
+  }
+  
+  .myself-h3 h3{ /*"about me" text*/
+    font-size: 20px;
+    align-items: center;
+    margin-left: 30px;
+  }
+  
+  .myself-right{
+    width:100%;
+    border-left: 0px solid #024e76;
+    display: block;
+    text-align: center;
+  }
+  
+  .myself-right img{
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+  
+  .myself-right p{ /*about me biograph */
+    font-size:12px;
+  }
+  
+  /*Work section*/
+  .container {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    border-left: 0px solid #024e76;
+  }
+  
+  .container p{
+    justify-content: center;
+    margin: auto;
+    padding: 0;
+  }
+  .portfolio-h3{
+    text-align: center;
+    width: 100%;
+    border-bottom: 3px solid #024e76;
+    margin-bottom: 10px;
+  }
+  
+  .portfolio-h3 h3{
+    font-size: 30px; /*"work" text */
+  }
+  
+  .portfolio-img { /*image changes*/
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+    background-position: center;
+    margin: 5px 10px 0 0;
+  }
+  
+  .portfolio-img h4{ /*project name*/
+    font-size: 22px; 
+  }
+  
+  .portfolio-img span{ /*project software */
+    font-size: 18px; 
+  }
+  
+  .pastel-puzzels h4{
+    width: 50%;
+  }
+  
+  /*Contact me section*/
+  .contact{
+    margin: 0;
+    width: 100%;
+  }
+  
+  .contact-h3{
+    text-align: center;
+    width: 100%;
+    border-bottom: 3px solid #024e76;
+    padding-bottom:  10px;
+    padding-left: 10%;
+
+  }
+  
+  .contact-h3 h3{ /*"contact me" text*/
+    font-size: 30px;
+
+  }
+  
+  .contact-list{
+    border-left: 0px solid #024e76;
+    margin-top: 10px;
+    justify-content: flex-start;
+    width: 80%;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+  }
+  
+  .contact-list p{
+    border-bottom: 0px solid  #024e76;
+    text-align: center;
+    font-size: 22px;
+  }
+  }
+  
