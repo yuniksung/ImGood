@@ -14,8 +14,6 @@
 body {
   color: rgb(37, 37, 37);
   font-family: Helvetica, Arial, sans-serif;
-  background-image: url(../images/background2.jpg);  
-  background-size: cover;  
 }
 
 /* header style*/
@@ -75,25 +73,70 @@ header nav ul {
 
 /* hero style */
 .hero{
-  background-image: url(../images/hero.jpg);
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: url(../images/bg.jpg);
   background-size: cover;
-  height: 400px;
+  background-position: bottom;
+}
+
+.hero .clouds{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero .clouds img {
+  position: absolute;
+  bottom: 0;
+  max-width: 100%;
+  animation: animate calc(8s * var(--i)) linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.location {
+  height: 30vh;
+  width: 30%;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content:  space-around;
   align-items: center;
 }
 
-.subtitle{
+.degree-section {
+  display: flex;
+  align-items: center;
+}
+
+.degree-section span{
+  margin: 10px;
+  font-size: 30px;
+}
+
+.degree-section h2{
+  font-size: 40px;
+}
+/* .subtitle{
   font-size: 48px;
   font-weight: bold;
   color: rgb(200, 245, 0);
   text-shadow: 3px 3px rgba(0, 0, 0, 0.7);
-}
+} */
 
-.subtitle span:hover{
+/* .subtitle span:hover{
   color: rgb(125, 153, 0);
-}
+} */
 
 /* About-me style */
 .myself {
@@ -471,10 +514,11 @@ figure:hover{
   /*Hero*/
   .hero {
     width: 100%;
-    text-align: center;
     height: 200px;
+    display: flex;
   }
-  
+ 
+
   .subtitle{
     font-size: 32px;
   }
